@@ -32,4 +32,4 @@ build/
 ### VS Code ###
 .vscode/
 
-C:\Users\Admin\IdeaProjects\xpresss_assessment\src\main\resources
+!**/src/main/resources
