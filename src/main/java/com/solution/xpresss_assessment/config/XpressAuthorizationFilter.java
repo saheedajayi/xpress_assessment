@@ -1,7 +1,6 @@
 package com.solution.xpresss_assessment.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.solution.xpresss_assessment.Utilities.JwtUtils;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -27,7 +26,7 @@ import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 @AllArgsConstructor
 public class XpressAuthorizationFilter extends OncePerRequestFilter {
     private final UserDetailsService userDetailService;
-    private final JwtUtils jwtUtils;
+    private final JwtService jwtUtils;
 
     @Override
     protected void doFilterInternal(
@@ -43,8 +42,8 @@ public class XpressAuthorizationFilter extends OncePerRequestFilter {
         if (StringUtils.hasText(header) &&
                 StringUtils.startsWithIgnoreCase(header, BEARER)) {
             final String token = header.substring(BEARER.length());
-            if (jwtUtils.validateToken(token)) {
-                final String username = jwtUtils.extractUsername(token);
+            if (jwtUtils.isValid(token)) {
+                final String username = jwtUtils.extractUsernameFromToken(token);
 
                 if (username != null) {
                     UserDetails userDetails = userDetailService.loadUserByUsername(username);

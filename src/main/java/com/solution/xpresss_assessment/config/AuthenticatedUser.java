@@ -1,6 +1,6 @@
 package com.solution.xpresss_assessment.config;
 
-import com.solution.xpresss_assessment.data.models.User;
+import com.solution.xpresss_assessment.config.auth.data.models.User;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -32,7 +32,7 @@ public class AuthenticatedUser implements UserDetails {
 
     @Override
     public String getUsername() {
-        return user.getEmail();
+        return user.getEmailAddress();
     }
 
     @Override
