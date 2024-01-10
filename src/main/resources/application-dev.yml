@@ -9,8 +9,8 @@ DIALECT : org.hibernate.dialect.PostgreSQLDialect
 SECRET_KEY: "OIDCu9SZ9U5LGqF6mW12KLuSxO70GPfqw3W2fh4uciXEi17bxij7229eNsVXRZnpsOa7pMb8gGbfJdl8YmnZ5uuaA43RPRH1v8720TWYUwAST90hzdLdzVYh54WXm44"
 
 
-private: 4QFXNsr4tFv5Iki8QNOzo2ET5qExeUl4_CVASPRV
-public: Bearer Afezg4BxVS9mbt4ECgEGP0qPWf97Uzvx_CVASPUB
+private: vrp4uaLOW8PqrGm5uXg1GiQbyIQ0q7h7_CVASPRV
+public: Bearer oZq98neVMWBNcrj580rz3O15IOLSYIgd_CVASPUB
 url: https://billerstest.xpresspayments.com:9603/api/v1/airtime/fulfil
 
 
